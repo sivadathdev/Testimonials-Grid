@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.violet {
+  background: hsl(263, 55%, 52%);
+}
+.gray {
+  background: hsl(217, 19%, 35%);
+}
+.dark-blue {
+  background: hsl(219, 29%, 14%);
+}
+.white {
+  background: hsl(0, 0%, 100%);
+}
+.light-gray {
+  background: hsl(0, 0%, 81%);
+}
+.blue-gray {
+  background: hsl(210, 46%, 95%);
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+.container {
+  margin: 50px;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 1fr;
+}
+.card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.quotation {
+  position: absolute;
+  right: 1.2rem;
+  top: 0;
+  width: 125px;
+  opacity: 0.7;
+  z-index: 1;
+}
+.card .personal-details{
+  display: flex;
+  align-items: center;
+}
+.card .personal-details img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.card h4 {
+  font-size: 25px;
+  margin-top: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.card p {
+  margin-top: 1.2rem;
+}
+.card.white, .card.white-last {
+  color: hsl(219, 29%, 14%);
+}
+
+.card.violet {
+  color: hsl(0, 0%, 100%);
+}
+.card.gray {
+  color: hsl(0, 0%, 100%);
+}
+.card.dark-blue {
+  color: hsl(0, 0%, 100%);;
+}
+.card .personal-details small {
+  color: hsl(0, 0%, 81%);
+}
+
+@media (min-width: 640px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+    margin: 100px auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .card.violet {
+    grid-column: 1 / span 2;
+  }
+  .card.dark-blue {
+    grid-column: 2 / span 2;
+  }
+  .card.white {
+    grid-column: 1;
+  }
+  .card.white-last {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
