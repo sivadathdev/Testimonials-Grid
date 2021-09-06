@@ -78,11 +78,7 @@ body {
   color: hsl(0, 0%, 81%);
 }
 
-@media (min-width: 640px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr)
-  }
-}
+
 
 @media (min-width: 1280px) {
   .container {
